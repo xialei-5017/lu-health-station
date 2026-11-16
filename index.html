@@ -260,6 +260,31 @@ button[disabled] { opacity: .45; cursor: not-allowed; box-shadow: none; }
 .welcome-card h2 { margin-bottom: .63rem; font-size: 1.42rem; color: var(--green-deep); }
 .welcome-card p { font-size: var(--fs-lg); line-height: 1.9; color: #33413c; }
 
+.qr-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.4rem;
+  margin: 2rem 0;
+  padding: 1.58rem 1.68rem;
+  background: linear-gradient(135deg, #eef6ef, #fff6e8);
+  border: 1px solid #dcebdc;
+  border-radius: var(--r-lg);
+}
+.qr-card .qr-text { flex: 1; min-width: 220px; }
+.qr-card h3 { font-size: var(--fs-h3); color: var(--green-deep); margin-bottom: .63rem; }
+.qr-card p { font-size: var(--fs-lg); line-height: 1.9; color: #33413c; }
+.qr-img img {
+  width: 180px; height: 180px;
+  border-radius: var(--r-md);
+  border: 6px solid #fff;
+  box-shadow: var(--shadow-md);
+}
+@media (max-width: 620px) {
+  .qr-card { flex-direction: column; text-align: center; }
+  .qr-img img { width: 160px; height: 160px; }
+}
+
 /* ============ 栏目卡片 ============ */
 .grid-wrap {
   display: grid;
@@ -664,6 +689,16 @@ body.hc .action-bar { background: #fff; border-bottom: 2px solid var(--green-dee
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.25 1.01l-2.2 2.22z"/></svg>
             021-59770038
           </a>
+        </div>
+      </section>
+
+      <section class="qr-card" aria-label="手机扫码访问">
+        <div class="qr-text">
+          <h3>手机扫码访问本页面</h3>
+          <p>用手机浏览器或微信扫一扫下方二维码，即可在手机上打开本服务站，方便家属和长辈随时查看养生视频、常识与联系电话。</p>
+        </div>
+        <div class="qr-img">
+          <img src="qrcode.png" alt="扫码打开社区服务站网页" width="180" height="180">
         </div>
       </section>
     </div>
